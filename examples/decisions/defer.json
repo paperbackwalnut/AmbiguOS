@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "action": "defer",
+  "path": "notes.txt",
+  "reason": "The available context does not establish a storage requirement."
+}

@@ -1,0 +1,20 @@
+name: check
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  userspace:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python: ['3.11', '3.13']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: make check
+      - run: make install DESTDIR="$RUNNER_TEMP/ambiguos-stage" PREFIX=/usr
+      - run: '"$RUNNER_TEMP/ambiguos-stage/usr/bin/ambimk" --help'

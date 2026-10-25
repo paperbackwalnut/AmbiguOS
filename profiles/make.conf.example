@@ -1,0 +1,8 @@
+COMMON_FLAGS="-O2 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+MAKEOPTS="-j2"
+FEATURES="sandbox usersandbox userpriv -getbinpkg"
+EMERGE_DEFAULT_OPTS="--usepkg=n --getbinpkg=n"

@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "action": "file",
+  "path": "notes.txt",
+  "reason": "A persistent text record is indicated."
+}

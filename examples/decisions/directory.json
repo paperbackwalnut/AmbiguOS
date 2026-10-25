@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "action": "directory",
+  "path": "notes",
+  "reason": "The request describes a collection of records."
+}
